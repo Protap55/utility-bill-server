@@ -87,7 +87,7 @@ async function run() {
       }
     });
 
-    // 📄 All bills from 'bills' collection
+    // All bills from 'bills' collection
     app.get("/bills", async (req, res) => {
       try {
         const result = await billCollection.find().toArray();
@@ -97,7 +97,7 @@ async function run() {
       }
     });
 
-    // 💳 Add payment
+    //  Add payment
     app.post("/payments", async (req, res) => {
       try {
         const paymentData = req.body;
@@ -108,7 +108,7 @@ async function run() {
       }
     });
 
-    // 🧾 Get payments for a specific user by email
+    //  Get payments for a specific user by email
 
     app.get("/payments", async (req, res) => {
       try {
