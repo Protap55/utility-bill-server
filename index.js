@@ -24,18 +24,18 @@ async function run() {
   try {
     // await client.connect();
     const db = client.db("utility_db");
-    console.log("✅ MongoDB Connected Successfully");
+    console.log(" MongoDB Connected Successfully");
     const allBillCollection = db.collection("all-bills");
     const billCollection = db.collection("bills");
     const paymentsCollection = db.collection("payments");
     const totalBillsCollection = db.collection("total-bills");
 
-    // 🏠 Root route
+    //  Root route
     app.get("/", (req, res) => {
       res.send("⚡ Utility Bill Management API is running...");
     });
 
-    // 📄 Recent 6 bills
+    // Recent 6 bills
     app.get("/all-bills", async (req, res) => {
       try {
         const result = await allBillCollection
@@ -49,7 +49,7 @@ async function run() {
       }
     });
 
-    // 🔍 Single bill
+    //  Single bill
     app.get("/all-bills/:id", async (req, res) => {
       try {
         const bill = await allBillCollection.findOne({
@@ -74,7 +74,7 @@ async function run() {
       }
     });
 
-    // 🔍 Get total bill by ID
+    //  Get total bill by ID
     app.get("/total-bills/:id", async (req, res) => {
       try {
         const bill = await totalBillsCollection.findOne({
@@ -126,7 +126,7 @@ async function run() {
       }
     });
 
-    // 🛠️ Update payment by ID (NEW)
+    //  Update payment by ID (NEW)
     app.put("/payments/:id", async (req, res) => {
       try {
         const id = req.params.id;
