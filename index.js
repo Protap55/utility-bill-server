@@ -109,7 +109,7 @@ async function run() {
     });
 
     // 🧾 Get payments for a specific user by email
-    // payment
+
     app.get("/payments", async (req, res) => {
       try {
         const { email } = req.query;
