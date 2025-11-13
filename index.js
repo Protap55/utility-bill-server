@@ -149,7 +149,7 @@ async function run() {
       }
     });
 
-    // ❌ Delete payment by ID (NEW)
+    //  Delete payment by ID (NEW)
     app.delete("/payments/:id", async (req, res) => {
       try {
         const id = req.params.id;
