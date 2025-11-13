@@ -62,7 +62,7 @@ async function run() {
       }
     });
 
-    // 📄 **Total bills (with optional category filter)**
+    // Total bills (with optional category filter)**
     app.get("/total-bills", async (req, res) => {
       try {
         const { category } = req.query;
